@@ -43,7 +43,8 @@ sslContextInstance.load_verify_locations(cafile=os.path.relpath("cacert.pem"))
 # --- THE FOLLOWING VARIABLES CAN BE UPDATED ---:
 
 # Access token for Bot app
-client = WebClient(token="xoxb-123456789-987654321012345-A0123b4567C8910d9876E5432f", ssl=sslContextInstance)
+slack_api_token = os.getenv('SLACK_API_TOKEN')
+client = WebClient(token=slack_api_token, ssl=sslContextInstance)
 # NOTE: The above is considered not a good security practice (do not mass-distribute the code with actual OAuth token embedded).
 # Alternatively, use the following line instead if hosted on the server
 # client = WebClient(token=os.environ['SLACK_API_TOKEN'], ssl=sslContextInstance)
