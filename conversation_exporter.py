@@ -74,7 +74,7 @@ designated_channel_id=""
 current_timestamp=time.time()
 
 # A float value of the UNIX timestamp set to 1st of the month 11 months ago in UTC
-oldest_message_timestamp=float((datetime.date.today() + relativedelta(months=-11)).replace(day=1).strftime('%s'))
+oldest_message_timestamp=float((datetime.date.today() + relativedelta(months=-3)).replace(day=1).strftime('%s'))
 
 # A dictionary of users and bots information (data structure is { 'U1A2B3CD4': {'real_name': "FIRST LAST", 'display_name': "First M. Last - 123"} } )
 users_bots_info = {}
